@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>WebRTC Video Chat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    video {
+      width: 45%;
+      margin: 10px;
+      border: 2px solid #007bff;
+      border-radius: 8px;
+    }
+    .container {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .log {
+      font-family: monospace;
+      max-height: 200px;
+      overflow-y: auto;
+      background: #f9f9f9;
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>WebRTC Video Chat (WebSocket Signaling)</h2>
+
+    <video id="yourVideo" autoplay muted playsinline></video>
+    <video id="friendsVideo" autoplay playsinline></video>
+
+    <div>Your Peer ID: <strong id="myPeerId">...</strong></div>
+
+    <input id="peerIdInput" class="form-control" placeholder="Enter peer ID to call" style="max-width: 300px; margin: 10px auto;" />
+    <button onclick="initiateCall()" class="btn btn-primary btn-lg">📞 Call</button>
+
+    <div class="log" id="logOutput"></div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

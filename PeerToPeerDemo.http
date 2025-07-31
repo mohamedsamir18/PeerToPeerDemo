@@ -1,0 +1,6 @@
+@PeerToPeerDemo_HostAddress = http://localhost:5204
+
+GET {{PeerToPeerDemo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
